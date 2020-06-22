@@ -1,4 +1,4 @@
-package com.flamexander.cloud.client;
+package com.flamexander.cloud.client.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

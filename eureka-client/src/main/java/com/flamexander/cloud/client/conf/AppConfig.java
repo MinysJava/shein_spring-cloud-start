@@ -1,4 +1,4 @@
-package com.flamexander.cloud.client;
+package com.flamexander.cloud.client.conf;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
