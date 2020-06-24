@@ -23,8 +23,14 @@ public class GreetingControllerImpl implements GreetingController {
     ExcelReader excelReader;
 
     WriteExcel writeExcel;
-
     private UserService userService;
+
+    @Autowired
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
+
+
 
     @Autowired
     public void setGreetingClient(ExcelReader excelReader) {
