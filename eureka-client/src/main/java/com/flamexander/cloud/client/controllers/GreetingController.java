@@ -10,7 +10,7 @@ public interface GreetingController {
     String greeting();
 
     @RequestMapping("/greeting1")
-    User greeting1(Long id);
+    User greeting1();
 
     @RequestMapping("/greeting2")
     String greeting2();

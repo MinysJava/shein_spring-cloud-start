@@ -30,8 +30,6 @@ public class GreetingControllerImpl implements GreetingController {
         this.userService = userService;
     }
 
-
-
     @Autowired
     public void setGreetingClient(ExcelReader excelReader) {
         this.excelReader = excelReader;
@@ -62,8 +60,8 @@ public class GreetingControllerImpl implements GreetingController {
     }
 
     @Override
-    public User greeting1(Long id) {
-        return userService.findById(id);
+    public User greeting1() {
+        return userService.findById(1L);
     }
 
     @Override
@@ -90,7 +88,7 @@ public class GreetingControllerImpl implements GreetingController {
 
     @GetMapping("/abc")
     public void test() {
-        User user = userService.findById(1L);
+        User user = userService.findById(2L);
         System.out.println(user.getId());
         System.out.println(user.getUserName());
     }

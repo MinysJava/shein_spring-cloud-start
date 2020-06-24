@@ -1,5 +1,6 @@
 package com.flamexander.cloud.client.feign;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,9 +18,13 @@ public class GreetingController {
     @RequestMapping("/get-greeting")
     public String greeting(Model model) {
 
-        User answer1 = greetingClient.greeting1(1L);
+
+
+        String answer = greetingClient.greeting();
+        User answer1 = greetingClient.greeting1();
 
         model.addAttribute("users", answer1);
+        model.addAttribute("gr1", answer);
 
         return "greeting-view";
     }
