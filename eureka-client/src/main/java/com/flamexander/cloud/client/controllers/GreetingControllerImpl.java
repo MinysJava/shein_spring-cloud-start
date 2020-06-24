@@ -1,5 +1,7 @@
 package com.flamexander.cloud.client.controllers;
 
+import com.flamexander.cloud.client.entites.User;
+import com.flamexander.cloud.client.service.UserService;
 import com.flamexander.cloud.client.utils.ExcelReader;
 import com.flamexander.cloud.client.utils.WriteExcel;
 import com.netflix.discovery.EurekaClient;
@@ -21,6 +23,8 @@ public class GreetingControllerImpl implements GreetingController {
     ExcelReader excelReader;
 
     WriteExcel writeExcel;
+
+    private UserService userService;
 
     @Autowired
     public void setGreetingClient(ExcelReader excelReader) {
@@ -52,8 +56,8 @@ public class GreetingControllerImpl implements GreetingController {
     }
 
     @Override
-    public String greeting1() {
-        return String.format("Hello1");
+    public User greeting1(Long id) {
+        return userService.findById(id);
     }
 
     @Override
@@ -80,6 +84,8 @@ public class GreetingControllerImpl implements GreetingController {
 
     @GetMapping("/abc")
     public void test() {
-        System.out.println(username);
+        User user = userService.findById(1L);
+        System.out.println(user.getId());
+        System.out.println(user.getUserName());
     }
 }

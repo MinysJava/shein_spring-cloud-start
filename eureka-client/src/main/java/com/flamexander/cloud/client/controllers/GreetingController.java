@@ -1,5 +1,6 @@
 package com.flamexander.cloud.client.controllers;
 
+import com.flamexander.cloud.client.entites.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -9,7 +10,7 @@ public interface GreetingController {
     String greeting();
 
     @RequestMapping("/greeting1")
-    String greeting1();
+    User greeting1(Long id);
 
     @RequestMapping("/greeting2")
     String greeting2();

@@ -9,7 +9,7 @@ public interface GreetingClient {
     String greeting();
 
     @RequestMapping("/greeting1")
-    String greeting1();
+    User greeting1(Long id);
 
     @RequestMapping("/greeting2")
     String greeting2();

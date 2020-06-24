@@ -5,6 +5,6 @@ import com.flamexander.cloud.client.entites.User;
 
 
 public interface UserService  {
-    User findByUserName(String username);
+    User findById(Long id);
 
 }

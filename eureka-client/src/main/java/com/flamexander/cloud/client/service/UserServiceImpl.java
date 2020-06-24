@@ -30,9 +30,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Transactional
-    public User findByUserName(String username) {
-        return userRepository.findOneByUserName(username);
+    public User findById(Long id) {
+        return userRepository.findFirstById(id);
     }
+
+
 
 
 }

@@ -16,13 +16,11 @@ public class GreetingController {
 
     @RequestMapping("/get-greeting")
     public String greeting(Model model) {
-        String answer = greetingClient.greeting();
-        String answer1 = greetingClient.greeting1();
-        String answer2 = greetingClient.greeting2();
-        System.out.println("Answer: " + answer);
-        model.addAttribute("greeting", answer);
-        model.addAttribute("greeting1", answer1);
-        model.addAttribute("greeting2", answer2);
+
+        User answer1 = greetingClient.greeting1(1L);
+
+        model.addAttribute("users", answer1);
+
         return "greeting-view";
     }
 }
